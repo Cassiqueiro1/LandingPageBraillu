@@ -1,0 +1,1054 @@
+:root {
+    --braillu-purple: #64217a;
+    --braillu-purple-dark: #431153;
+    --braillu-purple-deep: #351042;
+    --braillu-purple-soft: #eadcf0;
+    --braillu-yellow: #ffe978;
+    --braillu-yellow-soft: #fff4b8;
+    --braillu-orange: #f59a2b;
+    --braillu-orange-soft: #fff0da;
+    --braillu-cream: #fffaf0;
+    --braillu-surface: #ffffff;
+    --braillu-text: #231826;
+    --braillu-text-soft: #55445b;
+    --braillu-border: #dbcde0;
+    --braillu-border-strong: #b89cc4;
+    --braillu-focus: #005fcc;
+    --braillu-shadow: 0 1.2rem 3rem rgba(67, 17, 83, 0.12);
+    --braillu-shadow-soft: 0 0.9rem 2rem rgba(67, 17, 83, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--braillu-text);
+    background:
+        radial-gradient(circle at top right, rgba(255, 233, 120, 0.22), transparent 30rem),
+        radial-gradient(circle at top left, rgba(100, 33, 122, 0.05), transparent 26rem),
+        #ffffff;
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--braillu-purple-dark);
+    text-underline-offset: 0.18em;
+}
+
+a:hover {
+    color: var(--braillu-purple);
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 0.25rem solid var(--braillu-focus);
+    outline-offset: 0.25rem;
+    border-radius: 0.35rem;
+}
+
+.braillu-container {
+    width: min(76rem, calc(100% - 2rem));
+    margin-inline: auto;
+}
+
+.braillu-skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -5rem;
+    z-index: 9999;
+    background: var(--braillu-purple-dark);
+    color: #ffffff;
+    padding: 0.9rem 1.2rem;
+    border-radius: 0 0 0.75rem 0.75rem;
+    font-weight: 700;
+}
+
+.braillu-skip-link:focus {
+    top: 0;
+}
+
+.braillu-header {
+    background: rgba(255, 255, 255, 0.98);
+    border-bottom: 0.125rem solid var(--braillu-border);
+}
+
+.braillu-header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding-block: 1rem;
+}
+
+.braillu-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.9rem;
+    text-decoration: none;
+}
+
+.braillu-brand-logo {
+    width: 4.25rem;
+    height: 4.25rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 0.18rem solid var(--braillu-purple);
+    background: #ffffff;
+}
+
+.braillu-brand-text {
+    display: grid;
+    gap: 0.05rem;
+    color: var(--braillu-text);
+}
+
+.braillu-brand-text strong {
+    font-size: 1.3rem;
+    line-height: 1.2;
+    color: var(--braillu-purple-dark);
+}
+
+.braillu-brand-text span {
+    font-size: 0.95rem;
+}
+
+.braillu-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.braillu-nav a {
+    display: inline-block;
+    padding: 0.65rem 0.9rem;
+    border-radius: 999rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.braillu-nav a:hover,
+.braillu-nav a:focus-visible {
+    background: var(--braillu-purple-soft);
+}
+
+.braillu-eyebrow,
+.braillu-section-kicker {
+    display: inline-block;
+    margin: 0 0 1rem;
+    color: var(--braillu-purple-dark);
+    background: var(--braillu-purple-soft);
+    padding: 0.35rem 0.8rem;
+    border-radius: 999rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.83rem;
+    font-weight: 800;
+}
+
+.braillu-highlight-word {
+    color: var(--braillu-purple-dark);
+    font-weight: 800;
+}
+
+.braillu-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.8rem;
+}
+
+.braillu-actions-centered {
+    justify-content: center;
+}
+
+.braillu-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3.25rem;
+    padding: 0.85rem 1.35rem;
+    border-radius: 999rem;
+    font-weight: 800;
+    text-decoration: none;
+    text-align: center;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.braillu-button:hover {
+    transform: translateY(-0.08rem);
+}
+
+.braillu-button-primary {
+    background: var(--braillu-purple);
+    color: #ffffff;
+}
+
+.braillu-button-primary:hover {
+    background: var(--braillu-purple-dark);
+    color: #ffffff;
+}
+
+.braillu-button-secondary {
+    border: 0.15rem solid var(--braillu-purple);
+    background: #ffffff;
+    color: var(--braillu-purple-dark);
+}
+
+.braillu-button-secondary:hover {
+    background: var(--braillu-purple-soft);
+}
+
+.braillu-button-inline {
+    margin-top: 1rem;
+}
+
+.braillu-text-link {
+    display: inline-block;
+    margin-top: 0.7rem;
+    font-weight: 800;
+}
+
+.braillu-text-link-prominent {
+    font-size: 1.05rem;
+}
+
+.braillu-section {
+    padding-block: clamp(3rem, 7vw, 5rem);
+}
+
+.braillu-section h2,
+.braillu-final-cta h2 {
+    margin: 0 0 1rem;
+    color: var(--braillu-purple-dark);
+    font-size: clamp(2rem, 4vw, 3.3rem);
+    line-height: 1.18;
+}
+
+.braillu-section-intro {
+    max-width: 60rem;
+    margin-top: 0;
+    font-size: 1.14rem;
+    color: var(--braillu-text-soft);
+}
+
+.braillu-rich-text p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.braillu-emphasis {
+    padding: 1rem 1.2rem;
+    border-left: 0.35rem solid var(--braillu-orange);
+    background: var(--braillu-orange-soft);
+    border-radius: 0.8rem;
+    font-weight: 800;
+    color: var(--braillu-purple-dark);
+}
+
+.braillu-hero-main {
+    padding-block: clamp(2rem, 6vw, 5rem);
+    background: #ffffff;
+}
+
+.braillu-hero-main-inner {
+    max-width: 68rem;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.braillu-hero-main-logo {
+    width: min(100%, 18rem);
+    margin-bottom: 1.5rem;
+    border-radius: 1.6rem;
+    box-shadow: var(--braillu-shadow-soft);
+}
+
+.braillu-hero-main h1 {
+    margin: 0;
+    color: var(--braillu-text);
+    font-size: clamp(2.55rem, 6vw, 4.8rem);
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+}
+
+.braillu-hero-lead {
+    max-width: 64rem;
+    margin: 1.5rem auto 0;
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    font-weight: 700;
+    color: var(--braillu-purple-dark);
+}
+
+.braillu-hero-support {
+    max-width: 60rem;
+    margin: 1.4rem auto 0;
+    font-size: 1.18rem;
+    color: var(--braillu-text-soft);
+}
+
+.braillu-problem-section,
+.braillu-impact-section {
+    background:
+        radial-gradient(circle at top left, rgba(255, 233, 120, 0.8), transparent 30rem),
+        linear-gradient(135deg, #fff9d5, #fff0bb);
+}
+
+.braillu-two-column {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: start;
+    gap: 2rem;
+}
+
+.braillu-media-placeholder,
+.braillu-profile-photo-placeholder,
+.braillu-impact-placeholder {
+    min-height: 20rem;
+    border: 0.15rem dashed var(--braillu-border-strong);
+    border-radius: 1.6rem;
+    background: rgba(255, 255, 255, 0.78);
+    box-shadow: var(--braillu-shadow-soft);
+}
+
+.braillu-media-placeholder {
+    display: grid;
+    align-content: center;
+    gap: 0.85rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.braillu-placeholder-title {
+    margin: 0;
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--braillu-purple-dark);
+}
+
+.braillu-braille-dots {
+    width: 7rem;
+    height: 4.5rem;
+    margin-inline: auto;
+    opacity: 0.92;
+    background:
+        radial-gradient(circle, var(--braillu-purple) 0 0.42rem, transparent 0.46rem) 0 0 / 2.1rem 2.1rem,
+        radial-gradient(circle, var(--braillu-purple) 0 0.42rem, transparent 0.46rem) 1.05rem 1.05rem / 2.1rem 2.1rem;
+}
+
+.braillu-profile-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+.braillu-profile-photo-placeholder {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 2rem;
+    color: var(--braillu-purple-dark);
+    font-size: 1.2rem;
+    font-weight: 800;
+    background:
+        radial-gradient(circle at center, rgba(255, 233, 120, 0.45), transparent 14rem),
+        #ffffff;
+}
+
+.braillu-profile-subtitle {
+    margin-top: -0.2rem;
+    margin-bottom: 1.2rem;
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--braillu-orange);
+}
+
+.braillu-service-grid,
+.braillu-publication-grid,
+.braillu-testimonial-grid {
+    display: grid;
+    gap: 1.35rem;
+    margin-top: 2rem;
+}
+
+.braillu-service-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.braillu-publication-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.braillu-testimonial-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.braillu-service-card,
+.braillu-resource-card,
+.braillu-testimonial-card {
+    background: var(--braillu-surface);
+    border: 0.125rem solid var(--braillu-border);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    box-shadow: var(--braillu-shadow-soft);
+}
+
+.braillu-service-card h3,
+.braillu-resource-card h4,
+.braillu-testimonial-card h3,
+.braillu-content-block h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    color: var(--braillu-purple-dark);
+}
+
+.braillu-service-card h3,
+.braillu-testimonial-card h3,
+.braillu-content-block h3 {
+    font-size: 1.45rem;
+}
+
+.braillu-resource-card h4 {
+    font-size: 1.2rem;
+    line-height: 1.35;
+}
+
+.braillu-card-icon {
+    display: inline-grid;
+    place-items: center;
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+    border-radius: 999rem;
+    color: #ffffff;
+    background: var(--braillu-purple);
+    font-weight: 800;
+}
+
+.braillu-card-subtitle {
+    margin-top: -0.2rem;
+    font-weight: 800;
+    color: var(--braillu-orange);
+}
+
+.braillu-card-small {
+    color: var(--braillu-text-soft);
+    font-size: 0.98rem;
+}
+
+.braillu-section-cta,
+.braillu-after-grid-link {
+    margin-top: 2rem;
+}
+
+.braillu-process-section {
+    background: #ffffff;
+}
+
+.braillu-process-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.35rem;
+    list-style: none;
+    margin: 2rem 0 0;
+    padding: 0;
+}
+
+.braillu-process-card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    padding: 1.35rem;
+    background: var(--braillu-surface);
+    border: 0.125rem solid var(--braillu-border);
+    border-radius: 1.5rem;
+    box-shadow: var(--braillu-shadow-soft);
+}
+
+.braillu-process-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.55rem;
+    color: var(--braillu-purple-dark);
+    font-size: 1.35rem;
+}
+
+.braillu-process-card p {
+    margin: 0;
+}
+
+.braillu-process-number {
+    display: inline-grid;
+    place-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 999rem;
+    color: #ffffff;
+    background: var(--braillu-purple);
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.braillu-process-closing {
+    margin-top: 2rem;
+}
+
+.braillu-impact-placeholder-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.35rem;
+    margin-top: 2rem;
+}
+
+.braillu-impact-placeholder {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 2rem;
+    color: var(--braillu-purple-dark);
+    font-weight: 800;
+}
+
+.braillu-content-block {
+    margin-top: 3rem;
+}
+
+.braillu-meta {
+    color: var(--braillu-text-soft);
+    font-weight: 700;
+}
+
+.braillu-testimonials-section {
+    background: var(--braillu-cream);
+}
+
+.braillu-testimonial-card {
+    text-align: center;
+}
+
+.braillu-testimonial-avatar {
+    display: inline-grid;
+    place-items: center;
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 1rem;
+    border-radius: 999rem;
+    background: var(--braillu-purple-soft);
+    color: var(--braillu-purple-dark);
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.braillu-final-cta {
+    padding-block: clamp(3rem, 8vw, 5.5rem);
+    color: #ffffff;
+    background:
+        radial-gradient(circle at top right, rgba(255, 233, 120, 0.3), transparent 24rem),
+        linear-gradient(135deg, var(--braillu-purple-dark), var(--braillu-purple-deep));
+}
+
+.braillu-final-cta-inner {
+    text-align: center;
+}
+
+.braillu-final-cta .braillu-section-kicker {
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--braillu-yellow);
+}
+
+.braillu-final-cta h2 {
+    color: #ffffff;
+    max-width: 62rem;
+    margin-inline: auto;
+}
+
+.braillu-final-cta p {
+    max-width: 58rem;
+    margin-inline: auto;
+    font-size: 1.18rem;
+}
+
+.braillu-final-cta .braillu-button-secondary {
+    background: #ffffff;
+}
+
+.braillu-footer {
+    color: #ffffff;
+    background: var(--braillu-purple-dark);
+}
+
+.braillu-footer-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 2rem;
+    padding-block: 2.8rem;
+}
+
+.braillu-footer h2 {
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    color: var(--braillu-yellow);
+    font-size: 1.35rem;
+}
+
+.braillu-footer-intro,
+.braillu-footer-highlight {
+    max-width: 28rem;
+}
+
+.braillu-footer-highlight {
+    margin-top: 1rem;
+    padding-left: 1rem;
+    border-left: 0.25rem solid var(--braillu-orange);
+    font-weight: 800;
+}
+
+.braillu-footer a {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.braillu-footer a:hover {
+    color: var(--braillu-yellow);
+}
+
+.braillu-footer-link-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.braillu-footer-link-list li + li {
+    margin-top: 0.85rem;
+}
+
+.braillu-footer-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    text-decoration-thickness: 0.1em;
+    text-underline-offset: 0.22em;
+}
+
+.braillu-footer-icon {
+    display: inline-grid;
+    place-items: center;
+    flex: 0 0 auto;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 999rem;
+    background: rgba(255, 255, 255, 0.14);
+    color: var(--braillu-yellow);
+}
+
+.braillu-footer-icon svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    fill: currentColor;
+}
+
+.braillu-footer-bottom {
+    border-top: 0.08rem solid rgba(255, 255, 255, 0.25);
+    padding-block: 1rem;
+}
+
+.braillu-footer-bottom p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 68rem) {
+    .braillu-header-inner {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .braillu-two-column,
+    .braillu-profile-grid,
+    .braillu-footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .braillu-publication-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 56rem) {
+    .braillu-service-grid,
+    .braillu-process-list,
+    .braillu-impact-placeholder-grid,
+    .braillu-testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 42rem) {
+    .braillu-container {
+        width: min(100% - 1rem, 76rem);
+    }
+
+    .braillu-brand {
+        align-items: flex-start;
+    }
+
+    .braillu-brand-logo {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .braillu-nav ul,
+    .braillu-actions {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .braillu-nav a,
+    .braillu-button {
+        width: 100%;
+    }
+
+    .braillu-publication-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .braillu-process-card {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .braillu-button {
+        transition: none;
+    }
+}
+
+.braillu-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.braillu-gallery-card,
+.braillu-learning-card,
+.braillu-impact-card,
+.braillu-profile-photo-card {
+    margin: 0;
+}
+
+.braillu-braille-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    align-content: start;
+}
+
+.braillu-gallery-card,
+.braillu-learning-card,
+.braillu-impact-card,
+.braillu-profile-photo-card {
+    overflow: hidden;
+    border: 0.125rem solid var(--braillu-border);
+    border-radius: 1.5rem;
+    background: var(--braillu-surface);
+    box-shadow: var(--braillu-shadow-soft);
+}
+
+.braillu-gallery-card img,
+.braillu-learning-card img,
+.braillu-impact-card img,
+.braillu-profile-photo {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.braillu-gallery-card img {
+    height: 14rem;
+}
+
+.braillu-gallery-card-large {
+    grid-column: 1 / -1;
+}
+
+.braillu-gallery-card-large img {
+    height: 18rem;
+}
+
+.braillu-gallery-card figcaption,
+.braillu-learning-card figcaption,
+.braillu-impact-card figcaption,
+.braillu-profile-photo-card figcaption {
+    padding: 0.9rem 1rem 1rem;
+    color: var(--braillu-purple-dark);
+    font-weight: 800;
+    line-height: 1.45;
+}
+
+.braillu-profile-photo {
+    height: 32rem;
+    object-position: center;
+}
+
+.braillu-learning-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.35rem;
+    margin-top: 2rem;
+}
+
+.braillu-learning-card img {
+    height: 16rem;
+}
+
+.braillu-impact-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.35rem;
+    margin-top: 2rem;
+}
+
+.braillu-impact-card img {
+    height: 16rem;
+}
+
+.braillu-impact-card-wide {
+    grid-column: span 2;
+}
+
+.braillu-impact-card-wide img {
+    height: 20rem;
+}
+
+.braillu-testimonial-carousel {
+    margin-top: 2rem;
+    padding: clamp(1rem, 3vw, 2rem);
+    border: 0.125rem solid var(--braillu-border);
+    border-radius: 2rem;
+    background: var(--braillu-surface);
+    box-shadow: var(--braillu-shadow);
+}
+
+.braillu-testimonial-slides {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.braillu-testimonial-carousel.is-enhanced .braillu-testimonial-slide[hidden] {
+    display: none;
+}
+
+.braillu-testimonial-slide {
+    margin: 0;
+}
+
+.braillu-testimonial-inner {
+    display: grid;
+    grid-template-columns: 15rem 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.braillu-testimonial-photo {
+    display: block;
+    width: 100%;
+    height: 18rem;
+    object-fit: cover;
+    border-radius: 1.4rem;
+    border: 0.125rem solid var(--braillu-border);
+}
+
+.braillu-testimonial-content h3 {
+    margin-top: 0;
+    margin-bottom: 0.35rem;
+    color: var(--braillu-purple-dark);
+    font-size: 1.7rem;
+}
+
+.braillu-testimonial-meta {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--braillu-orange);
+    font-weight: 800;
+}
+
+.braillu-testimonial-content blockquote {
+    margin: 0;
+    padding: 1.2rem 1.35rem;
+    border-left: 0.35rem solid var(--braillu-orange);
+    border-radius: 0.8rem;
+    background: var(--braillu-orange-soft);
+    color: var(--braillu-text);
+}
+
+.braillu-testimonial-content blockquote p:first-child {
+    margin-top: 0;
+}
+
+.braillu-testimonial-content blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+.braillu-carousel-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.braillu-carousel-button {
+    min-height: 3rem;
+    padding: 0.75rem 1.15rem;
+    border: 0.15rem solid var(--braillu-purple);
+    border-radius: 999rem;
+    background: #ffffff;
+    color: var(--braillu-purple-dark);
+    font: inherit;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.braillu-carousel-button:hover {
+    background: var(--braillu-purple-soft);
+}
+
+.braillu-carousel-indicators {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+}
+
+.braillu-carousel-indicator {
+    min-height: 2.75rem;
+    padding: 0.65rem 1rem;
+    border: 0.125rem solid var(--braillu-purple);
+    border-radius: 999rem;
+    background: #ffffff;
+    color: var(--braillu-purple-dark);
+    font: inherit;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.braillu-carousel-indicator:hover,
+.braillu-carousel-indicator.is-active {
+    background: var(--braillu-purple);
+    color: #ffffff;
+}
+
+@media (max-width: 68rem) {
+    .braillu-learning-gallery,
+    .braillu-impact-gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .braillu-impact-card-wide {
+        grid-column: 1 / -1;
+    }
+
+    .braillu-testimonial-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .braillu-testimonial-photo {
+        width: min(100%, 22rem);
+        justify-self: center;
+    }
+}
+
+@media (max-width: 48rem) {
+    .braillu-braille-gallery,
+    .braillu-learning-gallery,
+    .braillu-impact-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .braillu-gallery-card-large {
+        grid-column: auto;
+    }
+
+    .braillu-impact-card-wide {
+        grid-column: auto;
+    }
+
+    .braillu-profile-photo {
+        height: auto;
+    }
+
+    .braillu-gallery-card img,
+    .braillu-gallery-card-large img,
+    .braillu-learning-card img,
+    .braillu-impact-card img,
+    .braillu-impact-card-wide img {
+        height: auto;
+    }
+
+    .braillu-carousel-controls,
+    .braillu-carousel-indicators {
+        flex-direction: column;
+    }
+
+    .braillu-carousel-button,
+    .braillu-carousel-indicator {
+        width: 100%;
+    }
+}
+
+#sobre-braille,
+#sobre,
+#servicos,
+#producao,
+#depoimentos,
+#contato {
+    scroll-margin-top: 2rem;
+}
+
+.braillu-awards-feature {
+    width: min(100%, 52rem);
+    margin: 1.8rem auto 2.5rem;
+    overflow: hidden;
+    border: 0.125rem solid var(--braillu-border);
+    border-radius: 1.8rem;
+    background: var(--braillu-surface);
+    box-shadow: var(--braillu-shadow-soft);
+}
+
+.braillu-awards-feature-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.braillu-awards-feature figcaption {
+    padding: 1rem 1.25rem 1.15rem;
+    color: var(--braillu-purple-dark);
+    font-weight: 800;
+    line-height: 1.5;
+}
