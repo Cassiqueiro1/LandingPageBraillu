@@ -123,7 +123,7 @@
 
                 <figure class="braillu-gallery-card">
                     <img
-                        src="{{ asset('img/braille/maquina-perkins.jpg') }}"
+                        src="{{ asset('img/braille/maquina-perkins.png') }}"
                         alt="Máquina Perkins de escrever em Braille sobre tecido vermelho, com folha escrita em Braille inserida."
                     >
                     <figcaption>Máquina Perkins para produção de textos em Braille.</figcaption>
@@ -139,6 +139,74 @@
             </div>
         </div>
     </section>
+
+<section class="braillu-section braillu-materials-section" aria-labelledby="titulo-materiais-braille">
+    <div class="braillu-container">
+        <p class="braillu-section-kicker">Braille em materiais, práticas e espaços</p>
+
+        <h2 id="titulo-materiais-braille">
+            Recursos concretos para ensinar, aprender e reconhecer o <span class="braillu-highlight-word">Braille</span>
+        </h2>
+
+        <p class="braillu-section-intro">
+            O Sistema Braille se fortalece quando está presente nas práticas pedagógicas,
+            nos materiais de alfabetização, nas experiências lúdicas e também nos espaços públicos.
+            Esses recursos ampliam possibilidades de ensino, leitura, escrita e participação.
+        </p>
+
+        <div class="braillu-editorial-gallery braillu-editorial-gallery-braille">
+            <figure class="braillu-editorial-card braillu-editorial-card-featured">
+                <img
+                    src="{{ asset('img/braille/braillete-02.jpg') }}"
+                    alt="Brailletes azuis com os furos das celas Braille sobre fundo amarelo, com placas empilhadas e pinos metálicos soltos."
+                >
+                <figcaption>
+                    Brailletes e pinos móveis como apoio à compreensão das combinações da cela Braille.
+                </figcaption>
+            </figure>
+
+            <figure class="braillu-editorial-card">
+                <img
+                    src="{{ asset('img/braille/braillete-01.jpg') }}"
+                    alt="Duas placas azuis de brailletes sobre fundo amarelo, com pinos metálicos encaixados formando palavras em Braille e vários pinos soltos ao redor."
+                >
+                <figcaption>
+                    Montagem tátil para explorar letras, palavras e organização dos pontos.
+                </figcaption>
+            </figure>
+
+            <figure class="braillu-editorial-card">
+                <img
+                    src="{{ asset('img/braille/jogos-e-bonecos-braille.png') }}"
+                    alt="Cartaz colorido com dois bonecos de mãos dadas, cada um com uma cela Braille com pontos móveis no peito, sob o título Aprender Braille pode ser divertido e lúdico."
+                >
+                <figcaption>
+                    Propostas lúdicas aproximam crianças e educadores do Sistema Braille.
+                </figcaption>
+            </figure>
+
+            <figure class="braillu-editorial-card">
+                <img
+                    src="{{ asset('img/braille/reglete.jpg') }}"
+                    alt="Conjunto de reglete de mesa e reglete de bolso metálicas com punção, sobre tecido vermelho, apoiadas em prancheta e estojo."
+                >
+                <figcaption>
+                    Regletes e punção seguem essenciais para a escrita manual em Braille.
+                </figcaption>
+            </figure>
+
+            <figure class="braillu-editorial-card">
+                <img
+                    src="{{ asset('img/braille/placa-braille-latinha-aluminio-sustentabilidade.jpg') }}"
+                    alt="Placas de alumínio com escrita em Braille fixadas sobre base emborrachada preta, apoiadas em superfície clara."
+                >
+                <figcaption>
+                    Acessibilidade também se constrói em sinalização, sustentabilidade e presença social.
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
 
     <section class="braillu-section" id="sobre" aria-labelledby="titulo-luciane">
         <div class="braillu-container braillu-profile-grid">
@@ -272,7 +340,7 @@
 
                 <figure class="braillu-learning-card">
                     <img
-                        src="{{ asset('img/braille/pecas-braille-bricks.jpg') }}"
+                        src="{{ asset('img/braille/livro-braille-bricks.jpg') }}"
                         alt="Blocos LEGO Braille Bricks coloridos espalhados sobre superfície clara, alguns com letras impressas."
                     >
                     <figcaption>Braille Bricks em proposta lúdica de alfabetização.</figcaption>
@@ -300,6 +368,104 @@
             </div>
         </div>
     </section>
+
+<section class="braillu-section braillu-practice-section" aria-labelledby="titulo-pratica-luciane">
+    <div class="braillu-container">
+        <p class="braillu-section-kicker">Formação, pesquisa e prática</p>
+
+        <h2 id="titulo-pratica-luciane">
+            Uma atuação construída no ensino, na investigação e no contato direto com pessoas e instituições
+        </h2>
+
+        <p class="braillu-section-intro">
+            A experiência de Luciane Molina atravessa salas de aula, cursos de formação,
+            pesquisas acadêmicas, atividades práticas e espaços de memória e acessibilidade.
+            Cada imagem revela uma parte desse trabalho contínuo em favor do Braille e da inclusão.
+        </p>
+
+        <div class="braillu-editorial-gallery braillu-editorial-gallery-practice">
+            <figure class="braillu-editorial-card braillu-editorial-card-featured">
+                <img
+                    src="{{ asset('img/luciane/luciane-professora-em-curso.jpg') }}"
+                    alt="Luciane sentada em sala de aula, lendo uma folha em Braille sobre a mesa."
+                >
+                <figcaption>
+                    Ensino de Braille em contexto formativo.
+                </figcaption>
+            </figure>
+
+            <figure class="braillu-editorial-card">
+                <img
+                    src="{{ asset('img/luciane/luciane-digitando-braille-na-maquina.jpg') }}"
+                    alt="Duas mulheres em pé usando uma máquina de escrever em Braille sobre a mesa; Luciane digita enquanto outra pessoa observa."
+                >
+                <figcaption>
+                    Demonstração do uso da máquina de escrever em Braille.
+                </figcaption>
+            </figure>
+
+            <figure class="braillu-editorial-card">
+                <img
+                    src="{{ asset('img/braille/luciane-mostrando-reglete.jpg') }}"
+                    alt="Quatro adultos em sala de aula ao redor de uma mesa com papéis, enquanto uma pessoa demonstra o uso de uma reglete aos demais."
+                >
+                <figcaption>
+                    Formação prática com reglete e acompanhamento de participantes.
+                </figcaption>
+            </figure>
+
+            <figure class="braillu-editorial-card">
+                <img
+                    src="{{ asset('img/eventos/curso-caragua.jpg') }}"
+                    alt="Adultos sentados em carteiras escrevendo em cadernos; sobre uma mesa há material didático amarelo com peças circulares azuis para Braille."
+                >
+                <figcaption>
+                    Curso com vivências concretas de escrita e aprendizagem.
+                </figcaption>
+            </figure>
+
+            <figure class="braillu-editorial-card">
+                <img
+                    src="{{ asset('img/eventos/luciane-com-materiais-em-curso.jpg') }}"
+                    alt="Luciane Molina em atividade de curso com materiais didáticos sobre a mesa."
+                >
+                <figcaption>
+                    Materiais acessíveis organizados para apoio à formação.
+                </figcaption>
+            </figure>
+
+            <figure class="braillu-editorial-card">
+                <img
+                    src="{{ asset('img/luciane/luciane-lendo-no-memorial-da-inclusao.jpg') }}"
+                    alt="Luciane em perfil, tocando um painel expositivo com inscrições em Braille e relevo no Memorial da Inclusão."
+                >
+                <figcaption>
+                    Experiência tátil e memória da acessibilidade.
+                </figcaption>
+            </figure>
+
+            <figure class="braillu-editorial-card">
+                <img
+                    src="{{ asset('img/eventos/defesa-doutorado-usp.jpeg') }}"
+                    alt="Duas capturas de videoconferência lado a lado da defesa do doutorado: à esquerda, slide Trajetória até o tema; à direita, grade com participantes."
+                >
+                <figcaption>
+                    Defesa de doutorado e consolidação da trajetória acadêmica.
+                </figcaption>
+            </figure>
+
+            <figure class="braillu-editorial-card">
+                <img
+                    src="{{ asset('img/eventos/luciane-apresentando-tcc-braille-unifei.jpg') }}"
+                    alt="Luciane Molina em pé ao lado de mesa com dois notebooks, apresentando TCC diante de telão com slide sobre o Sistema Braille na formação de professores."
+                >
+                <figcaption>
+                    Apresentação acadêmica sobre Braille e formação docente.
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
 
     <section class="braillu-section braillu-process-section" aria-labelledby="titulo-processo">
         <div class="braillu-container">
@@ -556,7 +722,7 @@
                         <p class="braillu-meta">Repositório Aberto, UAB · 2018</p>
                         <a
                             class="braillu-text-link"
-                            href="https://repositorioaberto.uab.pt/bitstream/10400.2/8123/1/Projeto EI_Atas.pdf"
+                                href="{{ asset('docs/2018_portugal_placas_Braille.pdf') }}"
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="Ler publicação: As placas de sinalização em Braille na escola inclusiva: construindo espaços acessíveis na perspectiva da sustentabilidade. Abre em nova aba."
