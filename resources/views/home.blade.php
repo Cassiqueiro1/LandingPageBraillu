@@ -187,7 +187,7 @@
 
             <figure class="braillu-editorial-card">
                 <img
-                    src="{{ asset('img/braille/reglete.jpg') }}"
+                    src="{{ asset('img/braille/reglete.png') }}"
                     alt="Conjunto de reglete de mesa e reglete de bolso metálicas com punção, sobre tecido vermelho, apoiadas em prancheta e estojo."
                 >
                 <figcaption>
